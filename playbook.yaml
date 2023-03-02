@@ -3,7 +3,7 @@
     hosts: localhost
     tasks: 
        - name: install git
-         shell: uptime -p
+         shell: pwd
          register: gitoutput
        - name: show the output
          debug:
