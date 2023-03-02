@@ -1,0 +1,10 @@
+---
+  - name: test the connectivity to target servers 
+    hosts: localhost
+    tasks: 
+       - name: install git
+         shell: uptime -p
+         register: gitoutput
+       - name: show the output
+         debug:
+           msg: "{{ gitoutput}}"
